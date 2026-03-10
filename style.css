@@ -1,0 +1,89 @@
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Centralizar a pagina */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Definir o tamanho da página */
+header,
+section {
+  width: 100%;
+  max-width: 64rem;
+}
+
+/* Estilização da imagem */
+header img {
+  width: 8rem;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+
+header img:hover {
+  scale: 125%;
+}
+
+/* Centralizar o nome e a foto */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilização das seções */
+section {
+  /* padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem; */
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+/* Torna o elemento visível dentro do flexbox */
+hr {
+    width: 100%;
+}
+
+/* Estilização da tabela */
+table, tr, td {
+  /* border: 2px solid black; */
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+/* Muda a cor de fundo de linhas impares na tabela */
+table tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+/* td:hover {
+  background-color: aqua;
+  transition: 1s;
+} */
+
+/* Centraliza e justifica a descrição dos projetos */
+td p {
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* Estilização das imagens dos projetos */
+#imagem-tabela {
+  height: 16rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
