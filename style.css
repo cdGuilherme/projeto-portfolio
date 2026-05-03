@@ -1,89 +1,181 @@
+/* Variáveis */
+:root {
+    --cor-texto: #181a1b;
+    --cor-fundo: white;
+
+    --cor-texto-dark: #e8e6e3;
+    --cor-fundo-dark: #181a1b;
+    --cor-hyperlink-dark: #3391ff;
+
+    --cor-fundo-tabela: #f0f0f080;
+    --cor-fundo-tabela-dark: #1c1f20;
+}
+
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Centralizar a pagina */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 /* Definir o tamanho da página */
 header,
 section {
-  width: 100%;
-  max-width: 64rem;
+    width: 100%;
+    max-width: 64rem;
 }
 
-/* Estilização da imagem */
-header img {
-  width: 8rem;
-  border-radius: 100%;
-  transition: 0.2s;
+/* Navegação */
+.header-nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem;
+    padding: 0;
 }
 
-header img:hover {
-  scale: 125%;
+.header-nav li {
+    margin-left: 1rem;
+    /* transition: 0.2s; */
+}
+
+.header-nav__itens {
+    color: var(--cor-texto);
+    text-decoration: none;
 }
 
 /* Centralizar o nome e a foto */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 96px);
+}
+
+/* Estilização da imagem */
+.hero img {
+    width: 8rem;
+    border-radius: 100%;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+}
+
+.hero img:hover {
+    scale: 125%;
+}
+
+.hero h1,
+.hero p {
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 /* Estilização das seções */
+header,
 section {
-  /* padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem; */
-  padding: 1rem;
-  border: 2px solid black;
-  border-radius: 1rem;
-  margin-top: 1rem;
+    /* padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem; */
+    padding: 1rem;
+    /* border: 2px solid black; */
+    /* border-radius: 1rem; */
+    /* margin-top: 1rem; */
 }
 
-/* Torna o elemento visível dentro do flexbox */
-hr {
-    width: 100%;
+ul {
+    padding-left: 1rem;
 }
 
 /* Estilização da tabela */
-table, tr, td {
-  /* border: 2px solid black; */
-  border-collapse: collapse;
-  padding: 0.5rem;
+.tabela-projetos,
+tr,
+td {
+    /* border: 2px solid black; */
+    border-collapse: collapse;
+    padding: 0.5rem;
 }
 
 /* Muda a cor de fundo de linhas impares na tabela */
-table tr:nth-child(odd) {
-  background-color: #f0f0f0;
+.tabela-projetos tr:nth-child(odd) {
+    background-color: var(--cor-fundo-tabela);
 }
-
-/* td:hover {
-  background-color: aqua;
-  transition: 1s;
-} */
 
 /* Centraliza e justifica a descrição dos projetos */
 td p {
-  text-align: justify;
-  text-align-last: center;
+    text-align: justify;
+    text-align-last: center;
 }
 
 /* Estilização das imagens dos projetos */
-#imagem-tabela {
-  height: 16rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.imagem-tabela {
+    height: 16rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-projetos {
+    border-radius: 1rem;
+}
+
+.btn-mudar-tema {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 2rem;
+}
+
+.dark-mode {
+    background-color: var(--cor-fundo-dark);
+    color: var(--cor-texto-dark);
+}
+
+.dark-mode section a {
+    color: var(--cor-hyperlink-dark);
+}
+
+.header-nav__mudar-tema {
+    height: 2rem;
+}
+
+.mudar-tema__img {
+    height: 2rem;
+    filter: brightness(0);
+}
+
+.mudar-tema__img-dark {
+    filter: brightness(100);
+}
+
+.tabela-projetos-dark tr:nth-child(odd) {
+    background-color: var(--cor-fundo-tabela-dark);
+}
+
+.header-nav__itens-dark {
+    color: var(--cor-texto-dark);
+}
+
+@media (min-width: 768px) {
+
+    /* Estilização da imagem */
+    .hero img {
+        width: 16rem;
+        margin-bottom: 2rem;
+    }
 }

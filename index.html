@@ -1,150 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="portfólio, fatec, Guilherme" />
-    <meta name="description" content="site" />
-    <link rel="stylesheet" href="style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfólio, fatec, Guilherme">
+    <meta name="description" content="site">
+    <link rel="stylesheet" href="style.css">
     <title>Guilherme</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>Guilherme Costa</h1>
-      <img src="img/foto.png" alt="foto" />
-      <br />
-      <hr />
+        <ul class="header-nav">
+            <li>
+                <a class="header-nav__itens" href="#sobre-mim">Sobre</a>
+            </li>
+            <li>
+                <a class="header-nav__itens" href="#academica">Acadêmica</a>
+            </li>
+            <li>
+                <a class="header-nav__itens" href="#projetos">Projetos</a>
+            </li>
+            <li class="header-nav__mudar-tema">
+                <button class="btn-mudar-tema" onclick="mudarTema()">
+                    <img class="mudar-tema__img" src="img/moon_stars_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </button>
+            </li>
+        </ul>
     </header>
-    <section>
-      <h2>Acadêmica</h2>
-      <ul>
-        <li>
-          Ensino Superior: Desenvolvimento de Software Multiplataforma - Fatec Votorantim Benedicto
-          Pagliato
-        </li>
-        <li>Ensino Técnico: Informática para Internet - Etec Prof. Elias Miguel Junior</li>
-      </ul>
+    <section class="hero">
+        <img src="img/foto.png" alt="foto">
+        <p>Olá 👋 eu sou</p>
+        <h1>Guilherme Costa</h1>
     </section>
     <section>
-      <h2>Profissional</h2>
-      <ul>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, aspernatur!</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, incidunt!</li>
-        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, libero.</li>
-      </ul>
+        <h2 id="sobre-mim">Sobre mim</h2>
+        <ul>
+            <li>Estudante de Desenvolvimento de Software Multiplataforma na FATEC</li>
+            <li>Técnico em Informática para Internet na ETEC</li>
+            <li>Experiência com Linux</li>
+            <li>Interesse em aprender e aprimorar meu conhecimento em desenvolvimento fullstack</li>
+            <li>Possuo inglês avançado</li>
+        </ul>
     </section>
     <section>
-      <h2>Projetos</h2>
-      <!-- <table border="3"> -->
-      <div style="overflow-x: auto">
-        <table>
-          <tr>
-            <td>
-              <h3>Check Question</h3>
-            </td>
-            <td>
-              <img id="imagem-tabela" src="img/check-question.png" alt="projeto check question" />
-              <p>
-                Check Question foi o meu TCC da Etec Prof. Elias Miguel Junior. É uma plataforma
-                onde você pode estudar para vestibulares que utiliza de gamificação para manter o
-                engajamento do estudante, com feedback instantâneo ao realizar as questões, sistema
-                de ranking para competir com outros estudantes, bloco de notas para estudos e mais.
-                O sistema funciona como um CRUD e foi utilizado PHP, HTML, CSS, SCSS, JavaScript e
-                SQL
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>
-                <a
-                  target="_blank"
-                  href="https://github.com/cdGuilherme/testimonials-grid-section-main"
-                  >Desafio Frontend usando Grid - Depoimentos</a
-                >
-              </h3>
-            </td>
-            <td>
-              <img
-                id="imagem-tabela"
-                src="img/testimonials-grid-section.png"
-                alt="projeto testimonials"
-              />
-              <p>
-                O desafio de depoimentos utilizando grid é um desafio do site
-                <a
-                  target="_blank"
-                  href="https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7"
-                  >Frontend Mentor</a
-                >
-                para testar e aprimorar minhas habilidades em frontend, nesse projeto eu utilizei
-                bastante de grid para deixar o site responsível em diferentes telas e conseguir
-                atender os padrões da
-                <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a>
-                (Web Content Accessibility Guidelines ou Diretrizes de Acessibilidade para Conteúdo
-                Web). Neste projeto eu fiz o uso de marcações semânticas no HTML5, propriedades
-                customizadas em CSS (variáveis), flexbox, grid, fluo de trabalho mobile-first, e
-                <a target="_blank" href="https://sass-lang.com/">SASS</a>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>
-                <a target="_blank" href="https://github.com/cdGuilherme/pico8-carts"
-                  >not flappy bird</a
-                >
-              </h3>
-            </td>
-            <td>
-              <img id="imagem-tabela" src="img/bird.gif" alt="projeto not flappy bird" />
-              <p>
-                Jogo inspirado em Flappy Bird usando a linguagem de programação Lua na engine do
-                <a target="_blank" href="https://www.lexaloffle.com/pico-8.php">pico8</a>, um
-                console de videogame fantasia. Inclui a gameplay inspirada no jogo com um mapa que
-                gera aleatóriamente conforme você joga, dificuldade que aumenta conforme você joga,
-                4 skins diferentes, suporte a touchscreen, e multiplas telas com a utilização de
-                state machine.
-                <a target="_blank" href="https://www.lexaloffle.com/bbs/?tid=53861"
-                  >Clique aqui para jogar</a
-                >
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>
-                <a target="_blank" href="https://github.com/cdGuilherme/simple-cowsay"
-                  >Cowsay C++</a
-                >
-              </h3>
-            </td>
-            <td>
-              <img id="imagem-tabela" src="img/cowsay.png" alt="projeto cowsay" />
-              <p>
-                Programa simples escrito em C++ inspirado no cowsay, recebe a entrada do usuário e
-                exibe na tela em um balão de fala com uma vaca desenhada em ASCII
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3><a target="_blank" href="https://github.com/cdGuilherme">Outros Projetos</a></h3>
-            </td>
-            <td>
-              <img id="imagem-tabela" src="img/github.png" alt="outros projetos" />
-              <p>
-                Confira outros projetos que eu já fiz na
-                <a target="_blank" href="https://github.com/cdGuilherme">minha página</a> do GitHub
-              </p>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <h2 id="academica">Acadêmica</h2>
+        <ul>
+            <li>
+                Ensino Superior: Desenvolvimento de Software Multiplataforma - Fatec Votorantim Benedicto
+                Pagliato
+            </li>
+            <li>Ensino Técnico: Informática para Internet - Etec Prof. Elias Miguel Junior</li>
+        </ul>
     </section>
-    <script>
-      // let nome = prompt("Digite o seu nome: ");
-      // window.alert("Olá " + nome);
-    </script>
-  </body>
+    <section>
+        <h2 id="projetos">Projetos</h2>
+        <div class="container-projetos" style="overflow-x: auto">
+            <table class="tabela-projetos">
+                <tr>
+                    <td>
+                        <h3>
+                            <a target="_blank" href="https://github.com/cdGuilherme/check-question">Check Question</a>
+                        </h3>
+                    </td>
+                    <td>
+                        <img class="imagem-tabela" src="img/check-question.png" alt="projeto check question" />
+                        <p>
+                            Check Question foi o meu TCC da Etec Prof. Elias Miguel Junior. É uma plataforma
+                            onde você pode estudar para vestibulares que utiliza de gamificação para manter o
+                            engajamento do estudante, com feedback instantâneo ao realizar as questões, sistema
+                            de ranking para competir com outros estudantes, bloco de notas para estudos e mais.
+                            O sistema funciona como um CRUD e foi utilizado PHP, HTML, CSS, SCSS, JavaScript e
+                            SQL
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            <a target="_blank"
+                                href="https://github.com/cdGuilherme/testimonials-grid-section-main">Desafio Frontend
+                                usando Grid - Depoimentos</a>
+                        </h3>
+                    </td>
+                    <td>
+                        <img class="imagem-tabela" src="img/testimonials-grid-section.png" alt="projeto testimonials" />
+                        <p>
+                            O desafio de depoimentos utilizando grid é um desafio do site
+                            <a target="_blank"
+                                href="https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7">Frontend
+                                Mentor</a>
+                            para testar e aprimorar minhas habilidades em frontend, nesse projeto eu utilizei
+                            bastante de grid para deixar o site responsível em diferentes telas e conseguir
+                            atender os padrões da
+                            <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a>
+                            (Web Content Accessibility Guidelines ou Diretrizes de Acessibilidade para Conteúdo
+                            Web). Neste projeto eu fiz o uso de marcações semânticas no HTML5, propriedades
+                            customizadas em CSS (variáveis), flexbox, grid, fluo de trabalho mobile-first, e
+                            <a target="_blank" href="https://sass-lang.com/">SASS</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            <a target="_blank" href="https://github.com/cdGuilherme/pico8-carts">not flappy bird</a>
+                        </h3>
+                    </td>
+                    <td>
+                        <img class="imagem-tabela" src="img/bird.gif" alt="projeto not flappy bird" />
+                        <p>
+                            Jogo inspirado em Flappy Bird usando a linguagem de programação Lua na engine do
+                            <a target="_blank" href="https://www.lexaloffle.com/pico-8.php">pico8</a>, um
+                            console de videogame fantasia. Inclui a gameplay inspirada no jogo com um mapa que
+                            gera aleatóriamente conforme você joga, dificuldade que aumenta conforme você joga,
+                            4 skins diferentes, suporte a touchscreen, e multiplas telas com a utilização de
+                            state machine.
+                            <a target="_blank" href="https://www.lexaloffle.com/bbs/?tid=53861">Clique aqui para
+                                jogar</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            <a target="_blank" href="https://github.com/cdGuilherme/simple-cowsay">Cowsay C++</a>
+                        </h3>
+                    </td>
+                    <td>
+                        <img class="imagem-tabela" src="img/cowsay.png" alt="projeto cowsay" />
+                        <p>
+                            Programa simples escrito em C++ inspirado no cowsay, recebe a entrada do usuário e
+                            exibe na tela em um balão de fala com uma vaca desenhada em ASCII
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3><a target="_blank" href="https://github.com/cdGuilherme">Outros Projetos</a></h3>
+                    </td>
+                    <td>
+                        <img class="imagem-tabela" src="img/github.png" alt="outros projetos" />
+                        <p>
+                            Confira outros projetos que eu já fiz na
+                            <a target="_blank" href="https://github.com/cdGuilherme">minha página</a> do GitHub
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
 </html>
